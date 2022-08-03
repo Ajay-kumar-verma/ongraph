@@ -3,20 +3,16 @@ import {useRef, useState,useEffect }from 'react';
 function App() {
 
 const data=useRef();
-const[response, setResponse]=useState([]);
-
-// useEffect(()=>{
-  
-// },[])
+// const[response, setResponse]=useState([]);
 
 
+const   srchFromApi= async (list)=>{
+ 
+ return [list, list, list, list];
+ 
+//  let list=await fetch("url&l=list");
+//  return list.json();
 
-
-
-const   srchFromApi= async (names)=>{
-  // let list=await api(names);
- return await [names,names,names,names];
-  // return list;
 }
 
 
@@ -24,20 +20,16 @@ const   srchFromApi= async (names)=>{
 
 const searchDomain=()=>{
 
-
-
-    let count=0;
   let domainList=data.current.value.split(" ");
-  domainList.map(e=>srchFromApi(e).then((res)=>{
-   count++;
-    console.log(response,count); 
-  setResponse([...response,...res]);
-  console.log(res,count);
 
-})); 
-// console.log(response,"final datas");
+  srchFromApi(domainList).then((res)=>{
+
+  console.log(res);
+
+
+});
+
 }
-
 
 
 
