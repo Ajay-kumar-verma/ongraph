@@ -5,7 +5,6 @@ function App() {
 const data=useRef();
 // const[response, setResponse]=useState([]);
 
-
 const   srchFromApi= async (list)=>{
  
  return [list, list, list, list];
