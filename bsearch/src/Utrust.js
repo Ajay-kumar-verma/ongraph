@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Utrust() {
 
   
-  const [userDate , setuserData] = useState({});
+  const [userDate , setuserData] = useState({});  
    const [response,setresponse]=useState("");
 
    fetch('https://merchants.api.utrust.com/api/session', {
